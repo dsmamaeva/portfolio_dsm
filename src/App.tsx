@@ -378,7 +378,7 @@ const ProjectThreeDetails = () => {
           </div>
           <h4 className="text-4xl font-black text-brand-grey lowercase tracking-tight italic">Летние винные сезоны Simple Wine</h4>
           <p className="text-brand-grey/70 leading-relaxed">
-            Комплексная поддержка имиджевого фестиваля в Москве и Петербурге. От формирования пула лидеров мнений до управления репутацией события в реальном времени.
+            Комплексная поддержка имиджевого фестиваля в Петербурге. От формирования пула лидеров мнений до управления репутацией события в реальном времени.
           </p>
           <div className="grid grid-cols-2 gap-6">
             {[
