@@ -39,7 +39,7 @@ export default function Hero() {
             <div className="bg-white p-6 shadow-[20px_20px_60px_-15px_rgba(0,0,0,0.1)] rounded-[3rem] border-2 border-brand-charcoal relative overflow-hidden group-hover:rotate-0 transition-transform duration-700">
               <div className="aspect-[4/5] bg-brand-blue/5 rounded-[2rem] overflow-hidden relative border border-brand-charcoal/5">
                 <img 
-                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=1000" 
+                  src="IMG_8756.PNG" 
                   alt="Daria Mamaeva" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 contrast-[1.05]"
                 />
