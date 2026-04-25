@@ -1083,7 +1083,7 @@ export default function App() {
                     <Sparkles size={100} />
                  </div>
                  <div className="relative z-10 space-y-2">
-                    <p className="text-sm font-black text-brand-blue uppercase tracking-[0.2em] leading-tight mb-2">Общий стаж в медиа: 5+ лет</p>
+                    <p className="text-sm font-black text-brand-blue uppercase tracking-[0.2em] leading-tight mb-2">Общий стаж в медиа: 4 года, 10 месяцев</p>
                     <p className="text-xs text-brand-grey/50 leading-relaxed italic max-w-sm">
                       От региональных СМИ до федеральных повесток и частного консалтинга. Умею быстро адаптироваться под любой масштаб задач.
                     </p>
