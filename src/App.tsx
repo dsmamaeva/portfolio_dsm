@@ -840,7 +840,7 @@ export default function App() {
             {/* Education Block - Visual Secondary */}
             <div className="pt-10 border-t border-brand-charcoal/10">
                <h4 className="text-[11px] font-black uppercase tracking-[0.5em] text-brand-grey/30 mb-8">Образование</h4>
-               <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+               <div className="flex flex-col gap-10">
                   <div className="flex gap-4 group">
                      <div className="w-12 h-12 rounded-2xl bg-white shadow-xl flex items-center justify-center p-2 shrink-0 group-hover:scale-110 transition-transform">
                         <img src="https://www.hse.ru/favicon.ico" className="w-full h-full object-contain" alt="HSE" />
