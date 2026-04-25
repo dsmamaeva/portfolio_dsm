@@ -280,7 +280,7 @@ const ProjectTwoDetails = () => {
           <div className="space-y-12 animate-in fade-in slide-in-from-top-4 duration-500">
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative aspect-square rounded-[3rem] overflow-hidden group">
-                   <img src="IMG_3850.PNG" className="w-full h-full object-cover" />
+                   <img src="/IMG_3850.PNG" className="w-full h-full object-cover" />
                    <div className="absolute inset-0 bg-brand-pink/20 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity" />
                    <div className="absolute bottom-8 left-8 px-6 py-2 bg-white rounded-full text-[10px] font-black uppercase tracking-widest">Experimental Space</div>
                 </div>
