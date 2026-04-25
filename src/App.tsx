@@ -702,7 +702,7 @@ export default function App() {
   const projects = [
     { 
       id: "01", 
-      title: "Развитие медиа и охваты", 
+      title: "Развитие проектов и увеличение охватов", 
       desc: "Масштабирование проектов и дистрибуция (КП, РБК)", 
       color: "bg-brand-pink/5", 
       textColor: "text-brand-pink",
