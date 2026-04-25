@@ -843,7 +843,7 @@ export default function App() {
                <div className="flex flex-col gap-10">
                   <div className="flex gap-4 group">
                      <div className="w-12 h-12 rounded-2xl bg-white shadow-xl flex items-center justify-center p-2 shrink-0 group-hover:scale-110 transition-transform">
-                        <img src="Логотип_НИУ_ВШЭ.png" className="w-full h-full object-contain" alt="HSE" />
+                        <img src="/Логотип_НИУ_ВШЭ.png" className="w-full h-full object-contain" alt="HSE" />
                      </div>
                      <div>
                         <p className="font-black text-brand-grey text-sm leading-tight">НИУ ВШЭ • <span className="text-brand-vibrant-pink">2026</span></p>
@@ -852,7 +852,7 @@ export default function App() {
                   </div>
                   <div className="flex gap-4 group">
                      <div className="w-12 h-12 rounded-2xl bg-white shadow-xl flex items-center justify-center p-2 shrink-0 group-hover:scale-110 transition-transform">
-                        <img src="2.png" className="w-full h-full object-contain" alt="Uni" />
+                        <img src="/2.png" className="w-full h-full object-contain" alt="Uni" />
                      </div>
                      <div>
                         <p className="font-black text-brand-grey text-sm leading-tight">ЛГУ им. Пушкина • <span className="text-brand-vibrant-pink">2024</span></p>
