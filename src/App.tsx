@@ -955,20 +955,20 @@ export default function App() {
                   </div>
                 </details>
                 
-                {/* Compact Contacts Block */}
-                <div className="pt-12 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  {/* Compact Contacts Block */}
+                <div className="pt-12 border-t border-gray-100 flex flex-col gap-8">
                   {[
                     { label: "EMAIL", val: "ds_mamaeva@mail.ru", icon: Mail, color: "text-brand-pink" },
                     { label: "TELEGRAM", val: "@d_s_m", icon: Send, color: "text-brand-blue" },
                     { label: "PHONE", val: "8 911 244 10 34", icon: Phone, color: "text-brand-pink-dark" }
                   ].map(link => (
-                    <a key={link.label} href={link.label === "EMAIL" ? `mailto:${link.val}` : "#"} className="flex items-center gap-3 group">
-                      <div className={`w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center ${link.color} group-hover:bg-brand-grey group-hover:text-white transition-all`}>
-                        <link.icon size={18} />
+                    <a key={link.label} href={link.label === "EMAIL" ? `mailto:${link.val}` : "#"} className="flex items-center gap-6 group">
+                      <div className={`w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center ${link.color} group-hover:bg-brand-grey group-hover:text-white transition-all shadow-sm`}>
+                        <link.icon size={24} />
                       </div>
-                      <div>
-                        <span className="text-[8px] font-black uppercase tracking-widest opacity-40 block">{link.label}</span>
-                        <span className="text-[11px] font-bold text-brand-grey hover:text-brand-pink transition-colors">
+                      <div className="border-b border-brand-grey/5 pb-2 flex-1">
+                        <span className="text-[10px] font-black uppercase tracking-widest opacity-40 block">{link.label}</span>
+                        <span className="text-xl font-bold text-brand-grey hover:text-brand-pink transition-colors tracking-tight">
                           {link.val}
                         </span>
                       </div>
