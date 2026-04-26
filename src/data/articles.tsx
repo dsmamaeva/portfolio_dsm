@@ -6,6 +6,9 @@ export interface Article {
   title: string;
   source: string;
   type: string;
+  role?: string;
+  excerpt?: string;
+  category?: string;
   content: React.ReactNode;
 }
 
@@ -15,84 +18,123 @@ export const articlesData: Article[] = [
     title: 'Пятый кризис: Наталья Зубаревич – о характере нового спада экономики',
     source: 'РБК Татарстан',
     type: 'Аналитика',
+    role: 'Full-production: ресерч, посещение мероприятия, аналитика и публикация',
     content: (
-       <p style="font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; line-height: 1.5; color: #444; margin-bottom: 40px; border-left: 2px solid #ed1c24; padding-left: 20px; font-style: normal;">
-        Стимул бюджетных вливаний в экономику затухает, и весь 2026 год пройдет в условиях «жесткой адаптации» к экономическому спаду. Такое мнение высказала профессор географического факультета МГУ Наталья Зубаревич, выступая на деловом форуме «Business Day РБК» в Казани. «Надо расстаться с иллюзией, что большие бюджетные вливания могут быть бесконечным драйвером экономики», - подчеркнула она. Спад затронет подавляющую часть гражданских отраслей и большинство регионов, даже бурно растущий в прошлые годы бизнес кафе и ресторанов оказался в зоне рисков, отметила она. Качественное управление на уровне региона или компании не сможет компенсировать общий негативный тренд, но все же управлять правильно – сейчас важно. В своей лекции перед представителями бизнеса Наталья Зубаревич рассказала, как проявляется кризис на разных территориях страны, кто справляется лучше других, и на что можно «ставить» компаниям в сложное время. 
-    </p>
+      <div className="space-y-12 text-brand-grey/90">
+        <div className="md:col-span-8 flex flex-col justify-center">
+          <div className="relative">
+            <div className="absolute -left-12 top-0 bottom-0 w-1 bg-brand-pink/30 hidden lg:block" />
+            <div className="p-8 bg-brand-pink/5 rounded-[3rem] border border-brand-pink/10 italic font-serif text-xl md:text-2xl leading-snug text-brand-grey shadow-sm">
+              Стимул бюджетных вливаний в экономику затухает, и весь 2026 год пройдет в условиях «жесткой адаптации» к экономическому спаду. Такое мнение высказала профессор географического факультета МГУ Наталья Зубаревич, выступая на деловом форуме «Business Day РБК» в Казани.
+            </div>
+          </div>
+        </div>
 
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; margin: 40px 0 20px; color: #ed1c24; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">«Пятый кризис – и вы уже не удивляетесь»</h3>
-    
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Статистика говорит о том, что Россия вступила в пятый экономический кризис. Бизнес уже не удивляется, правда? Дело почти привычное, хотя все равно трудное. Консенсусный прогноз макроэкономистов сводится к тому, что первого полугодия 2026 года для развития просто не будет. Оптимисты рассчитывают, что дно будет пройдено в начале года, после чего начнется медленное «отползание» вверх. Реалисты же советуют настраиваться на то, что в режиме жесткой адаптации придется провести весь 2026 год.</p>
+        <div className="space-y-12">
+          <h3 className="text-3xl md:text-5xl font-black text-brand-grey uppercase tracking-tighter italic border-b-4 border-brand-pink inline-block pb-2">
+            «Пятый кризис – и вы уже не удивляетесь»
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <p className="text-xl leading-relaxed font-light first-letter:text-6xl first-letter:font-black first-letter:text-brand-pink first-letter:mr-3 first-letter:float-left first-letter:leading-[0.8] first-line:uppercase first-line:tracking-widest first-line:text-brand-grey/60">
+                Статистика говорит о том, что Россия вступила в пятый экономический кризис. Бизнес уже не удивляется, правда? Консенсусный прогноз макроэкономистов сводится к тому, что первого полугодия 2026 года для развития просто не будет. Реалисты советуют настраиваться на жесткую адаптацию в течение всего года.
+              </p>
+              <p className="text-xl leading-relaxed font-light">
+                Инвестиции в экономику рухнули. Строительная отрасль балансирует на грани стагнации с символическим ростом в 1,2%, при этом ввод жилья ведет себя крайне непредсказуемо. Хотя в четвертом квартале 2025 года и наметился подъем, общая картина за год — далеко не оптимистична.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <p className="text-xl leading-relaxed font-light">
+                Что видно по итогам 2025 года? Рост ВВП фактически затух. Добывающий сектор, который долгие годы служил главным локомотивом экономики и подушкой безопасности для всей страны, уже довольно давно находится в отрицательной зоне.
+              </p>
+              <p className="text-xl leading-relaxed font-light">
+                Грузооборот транспортных перевозок в минусе, а розничная торговля просела на 2%. Общепит пока держится лучше, но надежд на продолжение роста в 2026 году все меньше. Гонка зарплат начинает остывать — это одна из немногих хороших новостей для бизнеса, но завершение роста зарплат неизбежно скажется на потреблении.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Что видно по итогам 2025 года? Рост валового внутреннего продукта фактически затух, а промышленность чувствует себя весьма посредственно. Добывающий сектор, который долгие годы служил главным локомотивом экономики, донором бюджета и подушкой безопасности для всей страны, уже довольно давно находится в отрицательной зоне.</p>
+        <div className="py-12 flex items-center gap-8">
+          <div className="h-px flex-1 bg-brand-grey/10" />
+          <Sparkles className="text-brand-pink opacity-50" size={24} />
+          <div className="h-px flex-1 bg-brand-grey/10" />
+        </div>
 
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Инвестиции в экономику рухнули, чего и следовало ожидать. Строительная отрасль балансирует на грани стагнации с символическим ростом в 1,2%, при этом ввод жилья ведет себя крайне непредсказуемо, совершая резкие скачки то вверх, то вниз. Хотя в четвертом квартале 2025 года и наметился подъем, общая картина за год - далеко не оптимистична.</p>
+        <div className="space-y-12">
+          <h3 className="text-3xl md:text-5xl font-black text-brand-grey uppercase tracking-tighter italic">
+            Отраслевой раскол: в плюсе – ВПК, золото и удобрения
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <p className="text-xl leading-relaxed font-light">
+              Почти вся добыча ушла в минус. В металлургической отрасли положительную динамику демонстрирует исключительно добыча золота. Лесопереработка находится в затяжном кризисе. В производстве мебели небольшой плюс сохранился только в сегменте кухонных и стенных шкафов.
+            </p>
+            <p className="text-xl leading-relaxed font-light">
+              Высокие ставки по кредитам и неуверенность граждан вынуждают откладывать крупные покупки. Единственным островком стабильности среди потребительских отраслей остается фарма, показавшая хороший рост на 15%.
+            </p>
+          </div>
+          <div className="py-8">
+            <blockquote className="p-12 bg-brand-offwhite text-brand-charcoal border-l-8 border-brand-charcoal rounded-r-[3rem] italic text-2xl md:text-4xl leading-tight shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-8 text-brand-charcoal/5"><Sparkles size={80} /></div>
+              Производство продуктов питания колеблется около нуля. Более того, упали объемы производства водки! Когда я вижу, что водка ушла в минус, я рыдаю и спрашиваю: «Что случилось с этой страной?»
+            </blockquote>
+          </div>
+        </div>
 
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Грузооборот транспортных перевозок находится в минусе, а объемы розничной торговли просели на 2%. На этом фоне общепит выглядит гораздо лучше – он пока держится, но надежд на то, что его рост продолжится в 2026 году, все меньше. Номинальные зарплаты растут довольно значимо, но уже не такими темпами, как в начале 2025 года. Реальные доходы населения также растут, но постепенно теряют динамику. Гонка зарплат, спровоцированная дефицитом кадров, начинает остывать – это одна из немногих хороших новостей для бизнеса: вам станет легче. С другой стороны, завершение роста реальных зарплат неизбежно скажется на потребительской активности в ближайшем будущем.</p>
+        <div className="space-y-8 max-w-4xl mx-auto">
+          <h3 className="text-4xl font-black text-brand-charcoal uppercase tracking-tighter italic text-center mb-12">
+            Будет ли безработица?
+          </h3>
+          <div className="space-y-6">
+            <p className="text-xl leading-relaxed font-light">
+              Наша главная проблема — демографическая пирамида. На рынок труда вышло малочисленное поколение, которое на 30% меньше поколения 35-летних. Борьба за человеческий ресурс будет актуальна до 2030-х годов. Трудовых мигрантов в стране стало меньше — около 3–3,5 млн человек вместо прежних 4,5 млн.
+            </p>
+            <div className="pl-8 border-l-2 border-brand-pink space-y-4 my-8">
+              <p className="text-xl leading-relaxed font-serif italic text-brand-pink font-bold">
+                Трудности в большинстве гражданских отраслей влекут за собой и проблемы для их персонала. Открытой безработицы тем не менее не будет. У нас не принято увольнять людей – у нас переводят на неполную занятость.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; margin: 40px 0 20px; color: #ed1c24; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Отраслевой раскол: в плюсе – ВПК, золото и удобрения</h3>
-    
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Что происходит в разных секторах экономики? Почти вся добыча ушла в минус. В металлургической отрасли положительную динамику демонстрирует исключительно добыча золота. Лесопереработка находится в затяжном кризисе уже не первый год.</p>
-        
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Посмотрим на потребительский рынок. По итогам 2025 года в производстве мебели небольшой плюс сохранился только в сегменте кухонных и стенных шкафов. Все остальное – от автомобилей до бытовой техники и мягкой мебели – демонстрирует отрицательные показатели. Высокие ставки по кредитам и неуверенность граждан в завтрашнем дне вынуждают откладывать крупные покупки до лучших времен. Единственным островком стабильности среди потребительских отраслей остается фарма, показавшая хороший рост на 15%.</p>
-        
-    <blockquote style="border-left: 3px solid #ed1c24; padding-left: 20px; margin: 30px 0; font-style: normal; color: #1a1a1a; background: #f9f9f9; padding: 20px; font-size: 0.9rem;">
-        Производство продуктов питания колеблется около нуля. Более того, упали объемы производства водки! Когда я вижу, что водка ушла в минус, я рыдаю и спрашиваю: «Что случилось с этой страной?» Водка в минусе – это аномалия.  
-    </blockquote>
+        <div className="space-y-12">
+          <h3 className="text-3xl md:text-5xl font-black text-brand-grey uppercase tracking-tighter italic border-b-4 border-brand-pink inline-block pb-2">
+            Разрыв между регионами
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <p className="text-xl leading-relaxed font-light">
+              В 2025 году разрыв между экономическими результатами субъектов усилился. Москва притягивает деньги благодаря штаб-квартирам корпораций. Татарстан и Санкт-Петербург находятся примерно на одном уровне по инвестиционной привлекательности. Ситуация в большинстве других регионов – не радужная.
+            </p>
+            <p className="text-xl leading-relaxed font-light">
+              Северо-Запад страны, за исключением Петербурга и Ленобласти, так и не смог восстановиться после санкционного удара. В Сибири экономический рост также остается крайне слабым. Лидерами роста стали Курганская область, Удмуртия и Татарстан.
+            </p>
+          </div>
+        </div>
 
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; margin: 40px 0 20px; color: #ed1c24; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Будет ли безработица?</h3>
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Перейдем к людям. По-прежнему наша главная проблема - демографическая пирамида. На рынок труда вышло малочисленное поколение, которое на 30% меньше поколения 35-летних. Борьба за человеческий ресурс будет актуальна для российских территорий до 2030-х годов, когда на рынок начнут выходить дети периода «материнского капитала». Впрочем, за подъемом последует новый демографический провал.</p>
+        <div className="space-y-12 bg-brand-pink/5 p-12 rounded-[4rem]">
+          <h3 className="text-3xl font-black text-brand-pink uppercase tracking-widest text-center">
+            Строительный сектор: дачи спасают статистику
+          </h3>
+          <div className="max-w-4xl mx-auto space-y-6">
+            <p className="text-xl leading-[1.8] font-light text-center text-balance">
+              В Санкт-Петербурге зафиксирован спад в строительстве на 23%. В Московской области 75% ввода — это ИЖС и дачи. За счет их регистрации в 2025 году удалось формально улучшить статистику по квадратным метрам. В Татарстане — нулевая динамика, что является победой на фоне глубоких минусов соседей по ПФО.
+            </p>
+          </div>
+        </div>
 
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Трудовых мигрантов в стране стало меньше — по оценкам экспертов, около 3–3,5 млн человек вместо прежних 4,5 млн. Переход на визовых мигрантов (например, из Индии и Северной Кореи) — это сложный путь. Квоты на визовый наем в 2025 году не были выбраны бизнесом даже наполовину. Нанять визового мигранта может только крупное предприятие, у которого есть ресурсы на тестирование и организацию «особого» процесса трудоустройства. У малого и среднего бизнеса таких возможностей нет.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Трудности в большинстве гражданских отраслей влекут за собой и проблемы для их персонала. Открытой безработицы тем не менее не будет. У нас не принято увольнять людей – у нас переводят на неполную занятость. Это может быть неполная рабочая неделя или, например, отпуска без сохранения содержания. Если посчитать долю работающих неполное время сотрудников от среднесписочной численности занятых (по данным крупных и средних предприятий, так как по малому бизнесу статистики нет), то картина следующая: в среднем по стране это 4,6%, а в Татарстане, например, — уже 6%. Главное, что не дотянули до показателей Самарской области с ее «АвтоВАЗом», который давно и плотно сидит на неполной занятости. Тем не менее, Татарстан как индустриальный регион входит в число лидеров по росту скрытой безработицы еще с четвертого квартала 2025 года. Это тревожный сигнал для бизнеса, потому что люди теряют в доходах.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Если посмотреть на динамику номинальных зарплат (без учета инфляции), то пик пришелся на 2024 год — тогда рост составил более 18%. В 2025 году мы увидели замедление: по итогам года рост составил около 14%. Для работодателей есть хорошая новость (и плохая – для потребительского рынка): гонка зарплат в России затухает. Судя по всему, в 2026 году она окончательно завершится.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Региональная статистика Росстата требует аккуратного обращения. Тем не менее, если взять данные нарастающим итогом за четыре года (с базовым 2021-м), можно выделить список территорий-победителей: Москва, Тюменская область, Новосибирск, Татарстан, Ханты-Мансийск, Ленинградская область и Санкт-Петербург. Именно эти регионы за четыре года показали наибольший прирост доходов населения — не 29%, как в среднем по стране, а 35–40%. Хуже всего дела с доходами обстоят на «лесном» Северо-Западе и в ряде регионов Приволжского федерального округа.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Разговоры о том, что последние четыре года помогли жителям бедных и слабых районов (за счет контрактных выплат участникам СВО и их семьям), не подтверждаются цифрами. Реальность от Росстата иная: по росту доходов выиграли богатые регионы.</p>
-
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; margin: 40px 0 20px; color: #ed1c24; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Разрыв между регионами нарастает</h3>
-    
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">В 2022 году многие регионы смогли быстро восстановиться после спада, по принципу «упал – отжался». В 2023 году рост был уже массовым. Однако далее произошел слом нормального распределения, и в 2024 году картина «развалилась» на фрагменты: общего роста не стало. В 2025 году разрыв между экономическими результатами субъектов только усилился.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Распределение инвестиций между регионами страны крайне неравномерно. Москва притягивает деньги благодаря концентрации штаб-квартир корпораций и платежеспособному потребительскому рынку. Татарстан и Санкт-Петербург находятся примерно на одном уровне по инвестиционной привлекательности. Ситуация в большинстве других регионов – не радужная и ухудшается.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Субъекты, где доминирует гражданская промышленность, начали испытывать серьезные трудности еще во второй половине 2024 года. В то же время регионы с мощным военно-промышленным комплексом продолжают демонстрировать высокую динамику. Эта дифференциация в 2026 году будет только усиливаться. Северо-Запад страны, за исключением Петербурга и Ленобласти, после санкционного удара так и не смог восстановиться, в Сибири экономический рост также остается крайне слабым. Лидерами роста стали Курганская область, Удмуртия и Татарстан.</p>
-
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; margin: 40px 0 20px; color: #ed1c24; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Строительный сектор: дачи спасают статистику</h3>
-    
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Ситуация в строительной сфере вызывает вопросы. В 2025 году стройка в целом по стране показала формальный ноль, хотя номинально зафиксирован небольшой плюс - около 2% роста отрасли за счет крупных индустриальных проектов и инфраструктурных строек. Но рост инвестиций в этих нишах далеко не всегда означает рост капитального строительства. Зачастую эти средства направляются на закупку оборудования, замену выбывающих мощностей и модернизацию существующих технологических линий, что не дает эффекта в виде строительных объемов.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Кто держится? Конечно, Москва и Московская область — там всегда идет рост. В Москве ситуация особая: идет масштабная программа реновации за бюджетные деньги. В 2025 году город ввел жилья больше, чем любой крупнейший частный застройщик. В Московской области 75% ввода — это ИЖС и дачи. За счет их регистрации можно прекрасно улучшить статистику по квадратным метрам.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">В других регионах картина более печальная. В Санкт-Петербурге зафиксирован спад в строительстве на целых 23%. Показатели немного подтянули, опять же, за счет ИЖС и регистрации дач — там было много «забавного» со статистикой. Зарегистрировать квадратные метры на уже оформленных дачах не составляет труда, когда нужно выполнить KPI по вводу жилья. В Татарстане – нулевая динамика в строительстве, и это победа на фоне глубоких минусов его ближайших соседей по Приволжскому федеральному округу – Самары, Нижнего Новгорода или Башкортостана.</p>
-
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; margin: 40px 0 20px; color: #ed1c24; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">«Конец прекрасной эпохи» и 70 дефицитных регионов</h3>
-    
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Очень тревожный сигнал – провал показателей региональных бюджетов. В среднем по стране доходы консолидированных бюджетов выросли всего на 5%. Основная причина торможения — падение поступлений по налогу на прибыль (в рублях, без учета инфляции). В среднем по России падение составило 9%, в Татарстане — 12%. Но все познается в сравнении: в Коми налог на прибыль рухнул в два раза, в ХМАО — на треть, в Кемеровской области — более чем на треть. 70 субъектов федерации оказались в дефиците, причем у ряда регионов он достигает критических 23–26%.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Обратим внимание на политику расходов. Многие регионы нарастили расходы на 10% при росте доходов в 5%. Москва, например, нарастила расходы на национальную экономику на 32% (транспорт, строительство), показав дефицитный бюджет. Пример профессионального управления бюджетом – Татарстан: он аккуратно оптимизировал расходы по всем направлениям, при этом ни разу не допустил сокращения социальных программ. Здравоохранение в республике выросло по расходам на 19%, по всем остальным социальным статьям - динамика тоже выше инфляции. И это правильно: экономить на людях – последнее дело. По итогам года, Татарстан — чемпион по бюджетной политике с нулевым дефицитом. Это минимизирует риски региона на 2026 год.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">А риски высокие: в 2026 году регионы начнут «подрубать» расходы на дорожное строительство и транспорт. Если ваш бизнес связан с этими подрядами – будьте готовы. И в целом, если вы связаны с выплатами из бюджетов регионов – будьте аккуратней. Субъекты сокращают расходы на национальную экономику: это дорожное строительство, транспорт, ЖКХ. Начинают падать даже расходы на здравоохранение: рост на 4% в рублях – печальный. Если ваш бизнес связан с бюджетной «медицинской частью» – я вас предупредила.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Ресурс государственного патернализма практически исчерпан. Главная иллюзия, которую сегодня надо отбросить – это надежда на бесконечность бюджетные вливания как на основной и бесконечный драйвера роста экономики.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">И, по известной пословице, сколько у вас пива, столько будет и песен – надо жить в расчете на собственный кошелек. Для бизнеса тщательный выбор приоритетов инвестирования – спасение от ненужного банковского кредита и возможность пройти через кризис без драматических потерь.</p>
-
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 1rem; margin: 40px 0 20px; color: #ed1c24; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Что ждет бизнес и регионы в 2026 году</h3>
-            
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Уповать на то, что в 2026 году региональным бюджетам и бизнесу станет легче, не приходится. Для этого цены на нефть должны взлететь до 150 долларов за баррель, но прогнозировать геополитические потрясения и, тем более, политику Дональда Трампа я не возьмусь. Пока очевидно, что экономика вошла в 2026 год, не только продолжая спад, но и рука об руку со шлейфом новых вызовов.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Первый новый негативный тренд – неизбежное замедление поступлений от налога на прибыль и налога на доходы физических лиц (НДФЛ). Рост зарплат, вызванный дефицитом кадров, сдает позиции, а значит, и налоговая база расти прежними темпами не будет. Предприятия больше не могут повышать оплату труда в ущерб собственной рентабельности. Кроме того, снижение прибыли во многих секторах автоматически уменьшит поступления в региональные бюджеты, для которых этот налог – один из основных.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Второй тренд – резкое сжатие инвестиций. В России порядка 60% всех инвестиций осуществляются за счет собственных средств предприятий. Из-за резко возросшей налоговой нагрузки и высокой стоимости заемного капитала у бизнеса останется меньше свободных денег для развития. Это приведет к торможению инвестиционной активности по всей стране и отказу от долгосрочных проектов. Кредитоваться на развитие при текущих ставках Центрального Банка могут позволить себе либо структуры, выполняющие государственные заказы, либо монополисты.</p>
-
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Третий тренд касается межбюджетных отношений. Федеральный центр вряд ли будет щедр на безвозмездные трансферты регионам в 2026 году. Федеральному бюджету самому приходится экономить и концентрировать ресурсы на приоритетных направлениях, поэтому субъектам придется рассчитывать преимущественно на собственные силы и доходы. Отсюда четвертый тренд – вынужденное сокращение расходов регионов на развитие экономики, в том числе, дорогостоящей транспортной инфраструктуры.</p>
- 
-    <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Решения на уровне региона или компании не смогут переломить эти тренды, но снизить риски и смягчить удар с помощью качественного управления – возможно. Важно считать деньги и жить по средствам, как показывает опыт того же Татарстана. Также важно сохранить эффективный средний региональный бизнес. Успех теперь зависит не столько от близости к федеральной казне или наличия сырьевых ресурсов, сколько от диверсификации местной экономики и профессионализма управленческих команд на местах.</p>
-</div>
+        <div className="space-y-8 max-w-4xl mx-auto">
+          <h3 className="text-4xl font-black text-brand-charcoal uppercase tracking-tighter italic text-center mb-12">
+            70 дефицитных регионов
+          </h3>
+          <p className="text-xl leading-relaxed font-light first-letter:text-5xl first-letter:font-black first-letter:text-brand-pink first-letter:float-left first-letter:mr-2">
+            Очень тревожный сигнал — провал показателей региональных бюджетов. Доходы консолидированных бюджетов выросли всего на 5%, в то время как расходы многих регионов выросли на 10%. Основная причина — падение поступлений по налогу на прибыль. 70 субъектов федерации оказались в дефиците.
+          </p>
+          <div className="pl-8 border-l-2 border-brand-pink space-y-4 my-8">
+            <p className="text-xl leading-relaxed font-serif italic text-brand-grey/80">
+              «В 2026 году регионы начнут «подрубать» расходы на дорожное строительство и транспорт. Если ваш бизнес связан с этими подрядами — будьте готовы. Ресурс государственного патернализма практически исчерпан».
+            </p>
+          </div>
+        </div>
+      </div>
     )
   },
   {
@@ -231,17 +273,19 @@ export const articlesData: Article[] = [
               ]
             }
           ].map((pair, idx) => (
-            <div key={idx} className="space-y-3">
-              <p className="font-black text-brand-pink uppercase tracking-widest text-[10px] leading-tight flex gap-3">
-                 <span className="opacity-30">Q.</span>
-                 <span>{pair.q}</span>
-              </p>
-              <div className="pl-8 space-y-3">
-                {pair.a.map((paragraph, pIdx) => (
-                  <p key={pIdx} className="leading-relaxed">{paragraph}</p>
-                ))}
-              </div>
-            </div>
+             <div key={idx} className="flex flex-col gap-6 md:gap-8 max-w-4xl">
+                <h4 className="text-2xl md:text-3xl font-black text-brand-grey uppercase tracking-tighter w-full md:w-3/4 pb-4">
+                  {pair.q}
+                </h4>
+                <div className="w-full md:w-[85%] self-end space-y-4">
+                  {pair.a.map((paragraph, pIdx) => (
+                    <p key={pIdx} className={`text-xl leading-relaxed font-light ${pIdx === 0 ? "first-letter:text-5xl first-letter:font-black first-letter:text-brand-pink first-letter:float-left first-letter:mr-2 first-letter:leading-[0.8]" : ""}`}>
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+                {idx < 14 && <div className="w-16 h-px bg-brand-pink/30 my-8 mx-auto self-center" />}
+             </div>
           ))}
         </div>
       </div>
@@ -254,48 +298,46 @@ export const articlesData: Article[] = [
     type: 'Статья',
     content: (
       <div className="space-y-16 text-brand-grey/90">
-        <div className="relative overflow-hidden p-12 md:p-20 bg-brand-grey text-white rounded-[4rem] group border border-white/20">
-            <div className="absolute inset-0 bg-brand-blue/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-            <Sparkles size={120} className="absolute -bottom-10 -right-10 text-white/5 rotate-12" />
-            <h2 className="text-4xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8] mb-8 relative z-10">TYPEFACE<br/>GENERATION</h2>
-            <div className="h-1 w-24 bg-brand-pink mb-8" />
+        <div className="relative overflow-hidden p-12 md:p-20 bg-brand-charcoal text-white rounded-[4rem] group border border-white/10">
+            <div className="absolute inset-0 bg-brand-vibrant-pink/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <h2 className="text-4xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] mb-8 relative z-10">GENERATION<br/><span className="text-brand-vibrant-pink italic serif-italic">TYPEFACE</span></h2>
+            <div className="h-1 w-24 bg-brand-vibrant-pink mb-8" />
             <p className="text-xl md:text-3xl font-serif italic text-white/60 relative z-10 max-w-2xl text-balance">Будущее типографики в эпоху нейронных сетей: студенты ИТМО разработали новый подход для генерации символов.</p>
         </div>
 
-        <div className="p-10 bg-brand-blue/5 rounded-[3rem] border border-brand-blue/10 italic font-serif text-2xl md:text-3xl leading-snug text-brand-grey relative">
-           <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1.5 h-24 bg-brand-blue rounded-full hidden lg:block" />
+        <div className="p-10 bg-brand-offwhite rounded-[3rem] border border-brand-grey/10 italic font-serif text-2xl md:text-3xl leading-snug text-brand-grey relative">
+           <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1.5 h-24 bg-brand-vibrant-pink rounded-full hidden lg:block" />
            Что, если дизайнер сможет за пару минут получить новый шрифт и не задумываться о лицензиях или недостающих в наборе символах? Исследователи из Университета ИТМО предложили новый метод генерации шрифтов с помощью диффузионных нейросетей.
         </div>
 
         <div className="columns-1 md:columns-2 gap-16 py-12 space-y-12 md:space-y-0">
           <div className="space-y-8 break-inside-avoid">
-            <p className="text-xl leading-[1.7] font-light first-letter:text-7xl first-letter:font-black first-letter:text-brand-blue first-letter:mr-3 first-letter:float-left first-letter:leading-[0.8]">Гротеск, антиква, брусковый, акцидентный, рукописный – каждый со своим характером. Шрифты — не просто набор символов. Это визуальный язык, который определяет настроение текста, его читаемость и даже уровень доверия к написанному. Но за красивыми гарнитурами скрывается целый ворох ограничений: лицензионные барьеры, отсутствие поддержки для кириллицы, греческого, арабского или других письменностей.</p>
-            <p className="text-xl leading-[1.7] font-light">Современные алгоритмы умеют не только распознавать закономерности в структуре символов, но и «додумывать» недостающие элементы, сохраняя единый стиль. Исследование студенты ИТМО проводили, используя диффузионную модель — тип нейросети, который создает изображения, постепенно «очищая» их от шума и восстанавливая детали.</p>
+            <p className="text-xl leading-[1.7] font-light first-letter:text-7xl first-letter:font-black first-letter:text-brand-vibrant-pink first-letter:mr-3 first-letter:float-left first-letter:leading-[0.8]">Гротеск, антиква, брусковый, акцидентный, рукописный – каждый со своим характером. Шрифты — не просто набор символов. Это визуальный язык, который определяет настроение текста, его читаемость и даже уровень доверия к написанному. Но за красивыми гарнитурами скрывается целый ворох ограничений: лицензионные барьеры, отсутствие поддержки для кириллицы, греческого, арабского или других письменностей.</p>
+            <p className="text-xl leading-[1.7] font-light text-brand-grey/80">Современные алгоритмы умеют не только распознавать закономерности в структуре символов, но и «додумывать» недостающие элементы, сохраняя единый стиль. Исследование студенты ИТМО проводили, используя диффузионную модель — тип нейросети, который создает изображения, постепенно «очищая» их от шума и восстанавливая детали.</p>
           </div>
           
           <div className="space-y-8 break-inside-avoid">
-            <blockquote className="p-12 bg-brand-grey text-white rounded-[3rem] italic text-xl leading-relaxed shadow-xl relative overflow-hidden">
-               <div className="absolute top-0 right-0 p-6 opacity-10"><Sparkles size={60} /></div>
+            <blockquote className="p-12 border-2 border-brand-charcoal text-brand-charcoal rounded-[3rem] italic text-xl leading-relaxed relative overflow-hidden bg-white">
                В основе архитектуры нейросети лежит модифицированная U-Net — популярная модель для обработки изображений. Она анализирует стиль исходного шрифта и структуру конкретного символа.
             </blockquote>
-            <p className="text-xl leading-[1.7] font-light">Исследователи обучили модель на 11 756 шрифтах латинского алфавита, а затем протестировали ее для создания недостающих символов.</p>
+            <p className="text-xl leading-[1.7] font-light text-brand-grey/80">Исследователи обучили модель на 11 756 шрифтах латинского алфавита, а затем протестировали ее для создания недостающих символов.</p>
           </div>
         </div>
 
-        <div className="space-y-8">
-           <h3 className="text-2xl font-black uppercase tracking-[0.3em] text-brand-grey/30 text-center">Критерии оценки</h3>
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="space-y-8 max-w-[800px] mx-auto">
+           <h3 className="text-3xl font-black uppercase tracking-tighter text-brand-charcoal border-b-2 border-brand-grey/10 pb-4 inline-block italic">Критерии оценки</h3>
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
               {[
                 { title: "Согласованность стиля", desc: "насколько буквы похожи друг на друга по стилю" },
                 { title: "Кернинг и трекинг", desc: "гармония между буквами в словах" },
                 { title: "Плотность текста", desc: "равномерность и читаемость" }
               ].map((item, idx) => (
-                <div key={idx} className="p-10 bg-brand-offwhite rounded-[3rem] border border-brand-grey/5 group hover:border-brand-blue/30 transition-all">
-                  <div className="w-12 h-12 rounded-2xl bg-brand-blue/10 flex items-center justify-center text-brand-blue mb-6 group-hover:scale-110 transition-transform">
+                <div key={idx} className="p-10 bg-brand-offwhite rounded-[3rem] border border-brand-grey/5 group hover:border-brand-vibrant-pink/30 transition-all flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-full bg-brand-vibrant-pink/10 flex items-center justify-center text-brand-vibrant-pink mb-6 group-hover:scale-110 transition-transform font-serif italic text-3xl">
                      {idx + 1}
                   </div>
                   <span className="font-black text-brand-grey uppercase tracking-tighter text-xl block mb-4">{item.title}</span>
-                  <p className="text-sm text-brand-grey/50 leading-relaxed font-light italic">{item.desc}</p>
+                  <p className="text-sm text-brand-grey/50 leading-relaxed font-light">{item.desc}</p>
                 </div>
               ))}
            </div>
@@ -312,34 +354,34 @@ export const articlesData: Article[] = [
       <div className="space-y-16 text-brand-grey/90">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
            <div className="space-y-8">
-              <span className="text-[10px] font-black uppercase tracking-[0.5em] text-brand-pink">HSE WORKSHOP</span>
-              <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-balance">МАРКЕТИНГ <br/> КАК <span className="text-brand-pink serif-italic italic">ФИЛОСОФИЯ</span></h2>
-              <div className="h-1.5 w-32 bg-brand-pink" />
+              <span className="text-[10px] font-black uppercase tracking-[0.5em] text-brand-vibrant-pink">HSE WORKSHOP</span>
+              <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-balance">МАРКЕТИНГ <br/> КАК <span className="text-brand-vibrant-pink serif-italic italic">ФИЛОСОФИЯ</span></h2>
+              <div className="h-1.5 w-32 bg-brand-vibrant-pink" />
            </div>
            <div className="space-y-6">
-              <p className="text-2xl leading-relaxed italic font-serif text-brand-grey/60 border-l-4 border-brand-pink/20 pl-8">В четверг, 3 октября, в Петербургском кампусе Высшей школы экономики прошел воркшоп с Андреем Сикорским, издателем журнала и директором по маркетингу РБК.</p>
+              <p className="text-2xl leading-relaxed italic font-serif text-brand-grey/50 border-l-4 border-brand-vibrant-pink/20 pl-8">В четверг, 3 октября, в Петербургском кампусе Высшей школы экономики прошел воркшоп с Андреем Сикорским, издателем журнала и директором по маркетингу РБК.</p>
            </div>
         </div>
 
         <div className="max-w-[900px] mx-auto space-y-12">
-          <p className="text-xl md:text-2xl leading-relaxed font-light first-letter:text-7xl first-letter:font-black first-letter:text-brand-pink first-letter:mr-3 first-letter:float-left first-letter:leading-[0.8]">Сначала спикер рассказал о том, как маркетинговая концепция 4P реально работает в РБК, обеспечивая новые продукты и продажи. Студенты познакомились со схемой коммуникационной стратегии РБК и понятием ключевой компетенции в бизнесе. И отдельное внимание – позиционированию бренда.</p>
+          <p className="text-xl md:text-2xl leading-relaxed font-light first-letter:text-7xl first-letter:font-black first-letter:text-brand-vibrant-pink first-letter:mr-3 first-letter:float-left first-letter:leading-[0.8]">Сначала спикер рассказал о том, как маркетинговая концепция 4P реально работает в РБК, обеспечивая новые продукты и продажи. Студенты познакомились со схемой коммуникационной стратегии РБК и понятием ключевой компетенции в бизнесе. И отдельное внимание – позиционированию бренда.</p>
           
-          <blockquote className="relative p-12 md:p-24 bg-brand-offwhite rounded-[4rem] border border-brand-grey/5 font-serif text-3xl md:text-5xl leading-tight text-brand-grey/80 italic shadow-2xl">
+          <blockquote className="relative p-12 md:p-24 bg-brand-offwhite rounded-[4rem] border border-brand-grey/5 font-serif text-3xl md:text-5xl leading-tight text-brand-grey/60 italic shadow-2xl">
              <div className="absolute top-0 right-0 p-12 text-brand-grey/5"><Sparkles size={100} /></div>
              «РБК начинался с распечаток котировок, сводок с рынка. История про нейтральность, цифры, факты — это то, что во многом определило позиционирование».
           </blockquote>
 
           <div className="space-y-8">
-            <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">От теории – сразу к практике!</h3>
-            <p className="text-xl leading-relaxed">Спикер предложил студентам примерить на себя роль маркетолога в РБК и решить несколько кейсов. Можно ли без вложений промоутировать бренд? Как увеличить аудиторию журнала, не увеличивая тираж? На эти вопросы участники встречи искали ответы в ходе дискуссии.</p>
-            <div className="p-12 bg-brand-grey text-white rounded-[3.5rem] space-y-6 relative overflow-hidden">
+            <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic text-brand-charcoal">От теории – сразу к практике!</h3>
+            <p className="text-xl leading-relaxed text-brand-grey/80">Спикер предложил студентам примерить на себя роль маркетолога в РБК и решить несколько кейсов. Можно ли без вложений промоутировать бренд? Как увеличить аудиторию журнала, не увеличивая тираж? На эти вопросы участники встречи искали ответы в ходе дискуссии.</p>
+            <div className="p-12 bg-brand-charcoal text-white rounded-[3.5rem] space-y-6 relative overflow-hidden">
                <div className="absolute -bottom-10 -right-10 opacity-10 rotate-12"><Sparkles size={160} /></div>
-               <p className="text-2xl md:text-3xl font-black uppercase tracking-tighter leading-tight relative z-10">«Медиаменеджер — это тот, кто смотрит на конструкцию как на бизнес».</p>
-               <p className="text-sm opacity-60 relative z-10 font-serif italic">— Андрей Сикорский</p>
+               <p className="text-2xl md:text-3xl font-black uppercase tracking-tighter leading-tight relative z-10 text-brand-vibrant-pink">«Медиаменеджер — это тот, кто смотрит на конструкцию как на бизнес».</p>
+               <p className="text-sm opacity-60 relative z-10 font-serif italic text-white/50">— Андрей Сикорский</p>
             </div>
           </div>
 
-          <p className="text-xl leading-relaxed font-light pt-8 border-t border-brand-grey/5">В конце встречи спикеру задали вопрос о рекомендуемой к прочтению литературе. «Медиаменеджер не имеет права быть нелюбопытным. В момент, когда он становится нелюбопытным, он отправляется на свалку истории», — резюмирует Сикорский.</p>
+          <p className="text-xl leading-relaxed font-light pt-8 border-t border-brand-grey/10 text-brand-grey/80">В конце встречи спикеру задали вопрос о рекомендуемой к прочтению литературе. <span className="font-serif italic font-medium">«Медиаменеджер не имеет права быть нелюбопытным. В момент, когда он становится нелюбопытным, он отправляется на свалку истории»</span>, — резюмирует Сикорский.</p>
         </div>
       </div>
     )
@@ -350,33 +392,45 @@ export const articlesData: Article[] = [
     source: 'Neva Today',
     type: 'Репортаж',
     content: (
-      <div className="space-y-8 text-brand-grey/90">
-        <div className="p-8 bg-brand-pink/5 rounded-[2.5rem] border-l-4 border-brand-pink italic font-serif text-xl leading-relaxed">
-          Чем более погожий день в Петербурге, тем больше людей на улицах города, в том числе и туристов. Вместе с ними на улицах города появляются и те, кто жаждет нажиться на гостях культурной столицы, причем, зачастую не самыми честными способами.
+      <div className="space-y-16 text-brand-grey/90">
+        <div className="relative overflow-hidden p-12 md:p-20 bg-brand-charcoal text-white rounded-[4rem] group border border-white/10">
+            <div className="absolute inset-0 bg-brand-vibrant-pink/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <h2 className="text-4xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] mb-8 relative z-10">ГОРОД<br/><span className="text-brand-vibrant-pink italic serif-italic">РАЗВОДНЫХ</span><br/>ЛЮДЕЙ</h2>
+            <div className="h-1 w-24 bg-brand-vibrant-pink mb-8" />
+            <p className="text-xl md:text-3xl font-serif italic text-white/60 relative z-10 max-w-2xl text-balance">Чем более погожий день в Петербурге, тем больше людей на улицах города, в том числе и туристов. Вместе с ними на улицах города появляются и те, кто жаждет нажиться на гостях культурной столицы, причем, зачастую не самыми честными способами.</p>
         </div>
 
-        <div className="space-y-6">
-          <p>Помимо водных экскурсий, конных прогулок с фиксированным прайсом есть и те, кто называет себя «уличными артистами», хотя в их деятельности прослеживается крайне мало общего с работой артиста. Речь идет о курсирующих по центру фальшивых Екатеринах, Петрах, рыцарях в железных доспехах, двухметровых конях и зебрах. Разберемся, что скрывается за словами «аниматор», «промоутер», во сколько обойдется «подкинуть коню на подкову» и почему честному уличному артисту нет места в городе.</p>
+        <div className="max-w-[800px] mx-auto space-y-12 columns-1">
+          <p className="text-xl leading-[1.7] font-light first-letter:text-7xl first-letter:font-black first-letter:text-brand-vibrant-pink first-letter:mr-3 first-letter:float-left first-letter:leading-[0.8]">Помимо водных экскурсий, конных прогулок с фиксированным прайсом есть и те, кто называет себя «уличными артистами», хотя в их деятельности прослеживается крайне мало общего с работой артиста. Речь идет о курсирующих по центру фальшивых Екатеринах, Петрах, рыцарях в железных доспехах, двухметровых конях и зебрах. Разберемся, что скрывается за словами «аниматор», «промоутер», во сколько обойдется «подкинуть коню на подкову» и почему честному уличному артисту нет места в городе.</p>
 
-          <h3 className="text-2xl font-black text-brand-grey uppercase tracking-tighter italic pt-4">Как все происходит?</h3>
-          <p>«Орудует» хвостато-пернатое ОПГ, в основном, в центре города. «Точки» есть рядом с Казанским собором, около Спаса на крови, на территории дворцовой площади и рядом с аркой главного штаба, а также на Большой морской и Малой садовой улицах. Схема простая: «аниматоры» выбирают «жертву» и начинают «развод» с доброжелательной фразы, предложения обняться / погладить голубя…</p>
-
-          <div className="p-6 bg-brand-grey/5 rounded-2xl md:mr-12 border-l-4 border-brand-pink font-serif italic text-lg leading-relaxed space-y-2">
-            <p>– Молодой человек, здравствуйте, задержим на минуточку? Откуда приехали к нам? – механизм запущен.</p>
+          <div className="space-y-8">
+            <h3 className="text-3xl font-black text-brand-grey uppercase tracking-tighter italic border-b-2 border-brand-grey/10 pb-4 inline-block">Как все происходит?</h3>
+            <p className="text-xl leading-[1.7] font-light">«Орудует» хвостато-пернатое ОПГ, в основном, в центре города. «Точки» есть рядом с Казанским собором, около Спаса на крови, на территории дворцовой площади и рядом с аркой главного штаба, а также на Большой морской и Малой садовой улицах. Схема простая: «аниматоры» выбирают «жертву» и начинают «развод» с доброжелательной фразы, предложения обняться / погладить голубя…</p>
           </div>
 
-          <p>Знающие люди обычно проходят мимо, туристы же, по незнанию, останавливаются и поддерживают диалог.</p>
+          <div className="py-8 space-y-6">
+            <div className="flex gap-4">
+               <div className="w-1 bg-brand-vibrant-pink shrink-0" />
+               <p className="font-serif italic text-2xl leading-relaxed text-brand-grey">– Молодой человек, здравствуйте, задержим на минуточку? Откуда приехали к нам? – механизм запущен.</p>
+            </div>
+            
+            <p className="text-xl leading-[1.7] font-light pl-5 text-brand-grey/60">Знающие люди обычно проходят мимо, туристы же, по незнанию, останавливаются и поддерживают диалог.</p>
 
-          <div className="p-6 bg-brand-grey/5 rounded-2xl md:ml-12 border-l-4 border-brand-pink font-serif italic text-lg leading-relaxed space-y-2 text-right">
-            <p>– Ангелина, – улыбающаяся девушка в костюме гусара кокетливо протягивает руку вперед.</p>
-            <p>– Анатолий.</p>
-            <p>– Арестован! Надо вас проверить на шпионаж. Камеру включайте.</p>
+            <div className="flex gap-4 justify-end">
+               <div className="space-y-2 text-right">
+                 <p className="font-serif italic text-2xl leading-relaxed text-brand-grey">– Ангелина, – улыбающаяся девушка в костюме гусара кокетливо протягивает руку вперед.</p>
+                 <p className="font-serif italic text-2xl leading-relaxed text-brand-grey font-bold">– Анатолий.</p>
+                 <p className="font-serif italic text-2xl leading-relaxed text-brand-grey">– Арестован! Надо вас проверить на шпионаж. Камеру включайте.</p>
+               </div>
+               <div className="w-1 bg-brand-charcoal shrink-0" />
+            </div>
           </div>
 
-          <p>Пара ловких движений и телефон молодого человека с включённой камерой уже у напарницы Ангелины. Капкан активирован. На этой ступени Анатолия уже оценили: для иностранцев и особо мягких людей прайс, как правило, выше. В среднем, за 3 кадра просят от 900 до 1500 рублей.</p>
+          <p className="text-xl leading-[1.7] font-light">Пара ловких движений и телефон молодого человека с включённой камерой уже у напарницы Ангелины. Капкан активирован. На этой ступени Анатолия уже оценили: для иностранцев и особо мягких людей прайс, как правило, выше. В среднем, за 3 кадра просят от 900 до 1500 рублей.</p>
 
-          <div className="p-6 bg-brand-grey/5 rounded-2xl md:mr-12 border-l-4 border-brand-pink font-serif italic text-lg leading-relaxed space-y-2">
-            <p>– Улыбнулись, подтянулись, парадный выход из дворца.</p>
+          <div className="flex gap-4 my-12 p-8 bg-brand-offwhite rounded-[2rem]">
+             <div className="w-1 bg-brand-vibrant-pink shrink-0" />
+             <p className="font-serif italic text-3xl leading-relaxed text-brand-grey font-bold">– Улыбнулись, подтянулись, парадный выход из дворца.</p>
           </div>
 
           <p>Первое нажатие на сенсорный экран, вспышка, звук щелчка камеры.</p>
@@ -487,8 +541,8 @@ export const articlesData: Article[] = [
     type: 'B2B-контент',
     content: (
       <div className="space-y-16 text-brand-grey/90">
-        <div className="relative overflow-hidden p-12 md:p-24 bg-brand-pink text-white rounded-[5rem] group shadow-2xl">
-            <div className="absolute inset-0 bg-brand-grey opacity-0 group-hover:opacity-10 transition-opacity" />
+        <div className="relative overflow-hidden p-12 md:p-24 bg-brand-vibrant-pink text-white rounded-[5rem] group shadow-2xl">
+            <div className="absolute inset-0 bg-brand-charcoal opacity-0 group-hover:opacity-10 transition-opacity" />
             <Sparkles size={140} className="absolute -top-10 -left-10 text-white/10 -rotate-12" />
             <span className="text-[10px] font-black uppercase tracking-[0.6em] mb-8 block text-white/60">CASE STUDY / LOGISTICS</span>
             <h2 className="text-4xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8] mb-12 relative z-10">THE <br/> CONTAINER <br/> <span className="serif-italic italic font-serif">LEGACY</span></h2>
@@ -496,12 +550,12 @@ export const articlesData: Article[] = [
         </div>
 
         <div className="p-12 border-4 border-dashed border-brand-grey/10 rounded-[4rem] space-y-6">
-           <p className="text-xl md:text-3xl font-serif italic text-brand-grey/50 leading-snug">«Когда речь идет про Сочи, в голове рисуются пальмы. Но за красивым фасадом скрывается суровая региональная специфика».</p>
+           <p className="text-xl md:text-3xl font-serif italic text-brand-grey/80 leading-snug">«Когда речь идет про Сочи, в голове рисуются пальмы. Но за красивым фасадом скрывается суровая региональная специфика».</p>
         </div>
 
         <div className="columns-1 md:columns-2 gap-16 py-12">
           <div className="space-y-8 break-inside-avoid mb-16">
-            <h3 className="text-4xl font-black uppercase tracking-tighter border-l-8 border-brand-pink pl-6">Дефицит качества</h3>
+            <h3 className="text-4xl font-black uppercase tracking-tighter border-l-8 border-brand-vibrant-pink pl-6">Дефицит качества</h3>
             <p className="text-xl leading-[1.7] font-light">Главная черта сочинского рынка — дефицит качественной инфраструктуры «здесь и сейчас». Задача перед организаторами стояла тривиальная: найти три 40-футовых контейнера. Но дьявол в деталях. Нужны были не просто «коробки», а объекты в идеальном состоянии.</p>
           </div>
           <div className="space-y-8 break-inside-avoid">
@@ -510,9 +564,9 @@ export const articlesData: Article[] = [
           </div>
         </div>
 
-        <div className="magazine-sidebar p-12 bg-brand-grey text-white rounded-[4rem] space-y-8 shadow-2xl relative overflow-hidden">
+        <div className="magazine-sidebar p-12 bg-brand-charcoal text-white rounded-[4rem] space-y-8 shadow-2xl relative overflow-hidden">
            <div className="absolute bottom-0 right-0 p-8 opacity-10"><Sparkles size={100} /></div>
-           <h4 className="text-xl font-serif italic text-brand-pink">Почему один контейнер не вернулся?</h4>
+           <h4 className="text-xl font-serif italic text-brand-vibrant-pink">Почему один контейнер не вернулся?</h4>
            <p className="text-2xl md:text-4xl font-black uppercase tracking-tighter leading-tight relative z-10">«Организатор был настолько впечатлен состоянием объекта, что выкупил его в личное пользование сразу после фестиваля».</p>
            <p className="text-xs opacity-50 uppercase tracking-widest">— Итоги сочинского спринта</p>
         </div>
@@ -528,39 +582,39 @@ export const articlesData: Article[] = [
       <div className="space-y-16 text-brand-grey/90">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
            <div className="space-y-8">
-              <span className="text-[10px] font-black uppercase tracking-[0.5em] text-brand-pink">LIFESTYLE / GASTRONOMY</span>
-              <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] text-balance">ESTETICA <br/> <span className="serif-italic italic text-brand-pink font-serif">DEL GUSTO</span></h2>
+              <span className="text-[10px] font-black uppercase tracking-[0.5em] text-brand-vibrant-pink">LIFESTYLE / GASTRONOMY</span>
+              <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] text-balance">ESTETICA <br/> <span className="serif-italic italic text-brand-vibrant-pink font-serif">DEL GUSTO</span></h2>
            </div>
            <div className="p-10 bg-brand-offwhite rounded-[4rem] border border-brand-grey/5">
-              <p className="text-xl leading-relaxed italic font-serif text-brand-grey/40">Приглашаем вместе с нами совершить путешествие к берегам Средиземного моря на бранче Tetto Italian Bistro.</p>
+              <p className="text-xl leading-relaxed italic font-serif text-brand-grey/60">Приглашаем вместе с нами совершить путешествие к берегам Средиземного моря на бранче Tetto Italian Bistro.</p>
            </div>
         </div>
 
-        <div className="prose-container max-w-4xl mx-auto space-y-12">
-          <div className="magazine-column-text space-y-8">
-             <p className="text-2xl leading-relaxed font-light first-letter:text-8xl first-letter:font-black first-letter:text-brand-pink first-letter:mr-4 first-letter:float-left first-letter:leading-[0.7]">Ресторан Тетто – это уголок солнечной Италии прямо посреди дождливой осени Северной столицы. Латунные элементы, рогожка, старинная лепнина и антикварный рояль сливаются в гармоничное целое.</p>
-             <p className="text-xl leading-relaxed font-light">В Тетто традиции Италии гармонично переплетаются с современными технологиями. Разработанное шеф-поваром Василием Окуловым меню – это свежий взгляд на классическую итальянскую кухню.</p>
+        <div className="max-w-[800px] mx-auto space-y-12">
+          <div className="space-y-8">
+             <p className="text-2xl leading-[1.7] font-light first-letter:text-8xl first-letter:font-black first-letter:text-brand-vibrant-pink first-letter:mr-4 first-letter:float-left first-letter:leading-[0.7]">Ресторан Тетто – это уголок солнечной Италии прямо посреди дождливой осени Северной столицы. Латунные элементы, рогожка, старинная лепнина и антикварный рояль сливаются в гармоничное целое.</p>
+             <p className="text-xl leading-relaxed font-light text-brand-grey/80">В Тетто традиции Италии гармонично переплетаются с современными технологиями. Разработанное шеф-поваром Василием Окуловым меню – это свежий взгляд на классическую итальянскую кухню.</p>
           </div>
 
-          <div className="p-12 md:p-24 bg-brand-grey text-white rounded-[5rem] space-y-12 shadow-2xl relative overflow-hidden group">
-             <div className="absolute inset-0 bg-brand-pink/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-             <div className="absolute top-0 right-0 p-12 text-brand-pink/20"><Sparkles size={120} /></div>
+          <div className="p-12 md:p-24 bg-brand-charcoal text-white rounded-[5rem] space-y-12 shadow-2xl relative overflow-hidden group">
+             <div className="absolute inset-0 bg-brand-vibrant-pink/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+             <div className="absolute top-0 right-0 p-12 text-brand-vibrant-pink/20"><Sparkles size={120} /></div>
              
              <div className="space-y-4 relative z-10">
-                <h4 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none italic text-brand-pink">COCKTAIL <br/> CHAPTERS</h4>
-                <div className="h-1 w-24 bg-brand-pink" />
+                <h4 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none italic text-brand-vibrant-pink">COCKTAIL <br/> CHAPTERS</h4>
+                <div className="h-1 w-24 bg-brand-vibrant-pink" />
              </div>
 
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
                 {[
                   { icon: "🍸", title: "Mi To", desc: "классика с горькими настойками" },
                   { icon: "🍷", title: "Tetto", desc: "авторские миксы и инновации" },
                   { icon: "🧊", title: "Senza alcol", desc: "трезвый взгляд на вечеринку" }
                 ].map((item, idx) => (
                   <div key={idx} className="space-y-4 p-8 bg-white/5 rounded-[2.5rem] border border-white/10 hover:bg-white/10 transition-colors">
-                     <span className="text-3xl block">{item.icon}</span>
+                     <span className="text-4xl block font-serif italic text-brand-vibrant-pink">{idx + 1}</span>
                      <span className="font-black text-sm uppercase tracking-[0.2em]">{item.title}</span>
-                     <p className="text-xs opacity-50 leading-relaxed font-light">{item.desc}</p>
+                     <p className="text-xs text-white/50 leading-relaxed font-light">{item.desc}</p>
                   </div>
                 ))}
              </div>
@@ -577,31 +631,31 @@ export const articlesData: Article[] = [
     content: (
       <div className="space-y-12 text-brand-grey/90">
         <div className="flex items-center gap-8 mb-12">
-           <div className="h-px flex-1 bg-brand-grey/10" />
-           <span className="text-[10px] font-black uppercase tracking-[0.8em] text-brand-grey/30">BALCON PR MATERIAL</span>
-           <div className="h-px flex-1 bg-brand-grey/10" />
+           <div className="h-px flex-1 bg-brand-charcoal/10" />
+           <span className="text-[10px] font-black uppercase tracking-[0.8em] text-brand-charcoal/30">BALCON PR MATERIAL</span>
+           <div className="h-px flex-1 bg-brand-charcoal/10" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-4 space-y-6">
-             <h2 className="text-6xl font-black uppercase tracking-tighter leading-[0.85] text-brand-blue">OASIS <br/> IN THE <br/> CITY</h2>
-             <div className="p-8 bg-brand-blue/5 rounded-[2.5rem] border border-brand-blue/10">
-                <p className="text-sm italic font-serif leading-relaxed text-brand-grey/60">Если бы Balcon был парфюмом, то он пах теплой дружеской встречей и свежим воздухом ночного Петербурга.</p>
+             <h2 className="text-6xl font-black uppercase tracking-tighter leading-[0.85] text-brand-charcoal">OASIS <br/> IN THE <br/> CITY</h2>
+             <div className="p-8 bg-brand-vibrant-pink/5 rounded-[2.5rem] border border-brand-vibrant-pink/10">
+                <p className="text-sm italic font-serif leading-relaxed text-brand-grey/80">Если бы Balcon был парфюмом, то он пах теплой дружеской встречей и свежим воздухом ночного Петербурга.</p>
              </div>
           </div>
           <div className="md:col-span-8 space-y-12">
-             <div className="pl-12 border-l-4 border-brand-grey/5 space-y-8">
-                <p className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-tight">Оазис отдыха в самом сердце Петербурга. <span className="text-brand-blue italic font-serif">Вечерние огни</span> и тихая музыка.</p>
-                <div className="magazine-menu space-y-4">
+             <div className="pl-6 md:pl-12 border-l-4 border-brand-charcoal/5 space-y-8">
+                <p className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-tight text-brand-charcoal">Оазис отдыха в самом сердце Петербурга. <br/><span className="text-brand-vibrant-pink italic font-serif">Вечерние огни</span> и тихая музыка.</p>
+                <div className="space-y-4">
                   {[
                     { name: "Peach Ice Tea", type: "Non Alc", price: "Fresh" },
                     { name: "Elderflower Spritz", type: "Alc", price: "Sparkling" }
                   ].map((item, idx) => (
-                    <div key={idx} className="flex items-center justify-between py-6 border-b border-brand-grey/5 group hover:px-4 transition-all hover:bg-brand-blue/5 rounded-2xl">
-                       <span className="text-xl font-bold uppercase tracking-tight">{item.name}</span>
+                    <div key={idx} className="flex items-center justify-between py-6 border-b border-brand-charcoal/5 group hover:px-4 transition-all hover:bg-brand-vibrant-pink/5 rounded-2xl">
+                       <span className="text-xl font-bold uppercase tracking-tight text-brand-charcoal">{item.name}</span>
                        <div className="flex gap-4 items-center">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-brand-grey/30">{item.type}</span>
-                          <span className="w-1.5 h-1.5 rounded-full bg-brand-blue" />
+                          <span className="text-[10px] font-black uppercase tracking-widest text-brand-charcoal/30">{item.type}</span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-brand-vibrant-pink" />
                        </div>
                     </div>
                   ))}
@@ -619,23 +673,26 @@ export const articlesData: Article[] = [
     type: 'Копирайтинг',
     content: (
       <div className="space-y-16 text-brand-grey/90">
-        <div className="p-12 md:p-24 bg-brand-grey text-white rounded-[5rem] relative overflow-hidden shadow-2xl">
-           <div className="absolute inset-0 bg-brand-blue/10 pointer-events-none" />
+        <div className="p-12 md:p-24 bg-brand-charcoal text-white rounded-[5rem] relative overflow-hidden shadow-2xl">
+           <div className="absolute inset-0 bg-brand-vibrant-pink/10 pointer-events-none" />
            <Sparkles size={160} className="absolute -bottom-10 -right-10 text-white/5 rotate-45" />
            <div className="relative z-10 space-y-8">
-              <span className="text-[10px] font-black uppercase tracking-[0.5em] text-brand-pink">COPYWRITING / DINING</span>
-              <h2 className="text-6xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8] mb-12">TÉTTO <br/> <span className="serif-italic italic font-serif text-brand-pink">RESTAURANT</span></h2>
+              <span className="text-[10px] font-black uppercase tracking-[0.5em] text-brand-vibrant-pink">COPYWRITING / DINING</span>
+              <h2 className="text-6xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8] mb-12">TÉTTO <br/> <span className="serif-italic italic font-serif text-brand-vibrant-pink">RESTAURANT</span></h2>
               <div className="max-w-2xl">
-                 <p className="text-xl md:text-2xl font-serif italic text-white/60 leading-relaxed">Итальянское прочтение в ритме мегаполиса. Вечер, проведенный здесь, — это не просто ужин, а история одного вкуса.</p>
+                 <p className="text-xl md:text-3xl font-serif italic text-white/60 leading-relaxed">Итальянское прочтение в ритме мегаполиса. Вечер, проведенный здесь, — это не просто ужин, а история одного вкуса.</p>
               </div>
            </div>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-12">
-            <h3 className="text-3xl font-black text-brand-grey uppercase tracking-tighter">Фокус на блюдо: Паппарделле с телячьей щекой</h3>
-            <p className="text-xl leading-relaxed">Мясо готовится по методу су-вид при температуре 50–70 градусов в течение 12 часов. Это позволяет сохранить сочность и нежность продукта, которые идеально дополняются домашней пастой.</p>
-            <div className="py-12 border-y border-brand-grey/5">
-                <p className="font-serif italic text-center text-5xl md:text-7xl text-brand-blue/30 tracking-widest">Anatomy of Taste</p>
+        <div className="max-w-[800px] mx-auto space-y-12">
+            <h3 className="text-3xl md:text-5xl font-black text-brand-grey uppercase tracking-tighter italic text-center">Фокус на блюдо: Паппарделле с телячьей щекой</h3>
+            <p className="text-2xl leading-[1.7] font-light first-letter:text-8xl first-letter:font-black first-letter:text-brand-vibrant-pink first-letter:mr-4 first-letter:float-left first-letter:leading-[0.7]">Мясо готовится по методу су-вид при температуре 50–70 градусов в течение 12 часов. Это позволяет сохранить сочность и нежность продукта, которые идеально дополняются домашней пастой.</p>
+            <div className="py-24 border-y border-brand-grey/10 border-dashed relative">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-brand-grey/5 whitespace-nowrap opacity-50 select-none">
+                  <span className="font-serif italic text-[120px] md:text-[200px] leading-none">Anatomy</span>
+                </div>
+                <p className="font-black text-center text-4xl md:text-6xl text-brand-charcoal uppercase tracking-tighter relative z-10">Текстура <span className="text-brand-vibrant-pink italic font-serif">&</span> Вкус</p>
             </div>
         </div>
       </div>
@@ -647,14 +704,29 @@ export const articlesData: Article[] = [
     source: 'Editorial Portfolio',
     type: 'Редактура',
     content: (
-      <div className="space-y-8">
-        <div className="space-y-4">
-          <h4 className="font-black text-brand-pink pb-2 border-b">Кейс #1: Оптимизация структуры</h4>
-          <p className="text-sm">Заголовок показался слишком длинным. Лид понравился: информативно, компактно. Понравилась структура текста: есть подзаголовки-разделы; соблюдена последовательность в повествовании...</p>
-        </div>
-        <div className="space-y-4">
-          <h4 className="font-black text-brand-blue pb-2 border-b">Кейс #2: Работа с интервью</h4>
-          <p className="text-sm">Интервью построено логично и структурно. Хорошо подобраны вопросы: один плавно перетекает в другой, диалог выглядит живым. Ошибки и стилистические улучшения отмечала корректурными знаками...</p>
+      <div className="space-y-16 text-brand-grey/90">
+         <div className="text-center space-y-6">
+            <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-tight">Editorial <br/> <span className="text-brand-vibrant-pink italic font-serif">Portfolio</span></h2>
+            <p className="text-xl text-brand-grey/50 font-light max-w-2xl mx-auto">Примеры работы с текстом: от структурации до стилистической вычитки.</p>
+         </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="p-12 bg-brand-offwhite rounded-[3rem] border border-brand-grey/5 space-y-8 group hover:border-brand-vibrant-pink/20 transition-colors">
+            <div className="space-y-4">
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-grey/40">CASE #1</span>
+              <h4 className="text-3xl font-black uppercase tracking-tighter text-brand-charcoal group-hover:text-brand-vibrant-pink transition-colors">Оптимизация структуры</h4>
+            </div>
+            <p className="text-xl leading-[1.7] font-light text-brand-grey/80">Заголовок показался слишком длинным. Лид понравился: информативно, компактно. Понравилась структура текста: есть подзаголовки-разделы; соблюдена последовательность в повествовании...</p>
+          </div>
+          
+          <div className="p-12 bg-brand-charcoal text-white rounded-[3rem] space-y-8 group relative overflow-hidden">
+            <div className="absolute inset-0 bg-brand-vibrant-pink/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="relative z-10 space-y-4">
+               <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/30">CASE #2</span>
+               <h4 className="text-3xl font-black uppercase tracking-tighter group-hover:text-brand-vibrant-pink transition-colors">Работа с интервью</h4>
+            </div>
+            <p className="text-xl leading-[1.7] font-light text-white/70 relative z-10">Интервью построено логично и структурно. Хорошо подобраны вопросы: один плавно перетекает в другой, диалог выглядит живым. Ошибки и стилистические улучшения отмечала корректурными знаками...</p>
+          </div>
         </div>
       </div>
     )
