@@ -702,7 +702,7 @@ export default function App() {
   const projects = [
     { 
       id: "01", 
-      title: "Развитие проектов и увеличение охватов", 
+      title: "Развитие медиа и охваты", 
       desc: "Масштабирование проектов и дистрибуция (КП, РБК)", 
       color: "bg-brand-pink/5", 
       textColor: "text-brand-pink",
@@ -714,21 +714,20 @@ export default function App() {
                 <span className="px-4 py-1 bg-brand-pink/10 text-brand-pink text-[10px] font-black uppercase tracking-wider rounded-full">Развитие Telegram-канала</span>
               </div>
               <h4 className="text-4xl font-black text-brand-grey lowercase tracking-tight italic">«Комсомольская правда»</h4>
-              <p className="text-brand-grey/70 leading-relaxed">
-                Переход от классической новостной ленты к современному медиа-формату. Внедрение рубрик, регулярного "живого" контента и интерактивных механик позволило кратно увеличить вовлеченность (ER) и органический прирост.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  { label: "Органика", text: "Увеличение базы подписчиков без рекламных вложений." },
-                  { label: "Виральность", text: "Рост индекса цитируемости и упоминаний." },
-                  { label: "Контент", text: "Внедрение ряда рубрик, набирающих большое количество перерепостов и комментариев." }
-                ].map((item, idx) => (
-                  <li key={idx} className="flex gap-4">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-pink mt-2 shrink-0" />
-                    <p className="text-sm text-brand-grey/80"><strong className="text-brand-pink uppercase tracking-widest text-[10px] mr-2">{item.label}:</strong> {item.text}</p>
-                  </li>
-                ))}
-              </ul>
+              <div className="space-y-6">
+                <div>
+                   <span className="text-[10px] font-black uppercase tracking-widest text-brand-grey/40 block mb-1">Проблема</span>
+                   <p className="text-sm text-brand-grey/80 leading-relaxed font-bold">Консервативная лента, низкие охваты и стагнация вовлеченности (ER).</p>
+                </div>
+                <div>
+                   <span className="text-[10px] font-black uppercase tracking-widest text-brand-grey/40 block mb-1">Решение</span>
+                   <p className="text-sm text-brand-grey/80 leading-relaxed italic">Внедрение рубрикатора, запуск «живого» контента и интерактивных механик (опросы, экспертные разборы).</p>
+                </div>
+                <div className="pt-4 border-t border-brand-grey/5">
+                   <span className="text-[10px] font-black uppercase tracking-widest text-brand-pink block mb-1">Результат & Роль</span>
+                   <p className="text-sm text-brand-grey font-bold">Цифровой редактор: Кратный рост охватов и ER за 4 месяца.</p>
+                </div>
+              </div>
             </div>
             <div className="flex flex-col gap-6 justify-center">
               <div className="grid grid-cols-2 gap-4">
